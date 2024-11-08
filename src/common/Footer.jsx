@@ -1,18 +1,19 @@
 // Footer.jsx
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { brandlogo } from '../assets';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         
         {/* Logo and Description */}
         <div>
           <div className="flex items-center space-x-3 mb-4">
-            <div className="bg-teal-500 rounded-full w-12 h-12 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Logo</span>
-            </div>
+          <div>
+              <img src={brandlogo} alt="" width={100} height={100}/>
+              </div>
             <span className="text-xl font-semibold">Sereneschealthinitiative</span>
           </div>
           <p className="text-gray-300">
@@ -68,7 +69,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="mt-8 border-t border-gray-700 pt-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-        <p>©{new Date().getFullYear()}. Sereneschealthinitiative. All Rights Reserved.</p>
+        <p>SERENE ©{new Date().getFullYear()}. All Rights Reserved.</p>
           <div className="flex space-x-4 mt-2 md:mt-0">
             <a href="#" className="hover:text-white">Terms of Use</a>
             <a href="#" className="hover:text-white">Privacy Policy</a>
