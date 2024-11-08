@@ -29,7 +29,7 @@ const Navbar = () => {
 
       {/* Contact Us Button */}
       <button className="hidden md:block border border-teal-500 text-teal-500 px-4 py-2 rounded-full hover:bg-teal-50">
-        Contact us
+        <a href="/contact">Contact Us</a>
       </button>
 
       {/* Mobile Hamburger Icon */}
