@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { brandlogo } from "../assets";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +16,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-4 bg-white shadow-md sticky top-0">
+    <nav className="flex items-center justify-between py-4 px-6 bg-white shadow-md sticky top-0 z-10">
       {/* Logo */}
       <div className="flex items-center">
-        <div className="bg-teal-500 rounded-full w-12 h-12 flex items-center justify-center">
-          <span className="text-white font-bold text-lg">Logo</span>
-        </div>
+        <img src={brandlogo} alt="" width={100} height={100}/>
       </div>
 
       {/* Desktop Nav Items */}
