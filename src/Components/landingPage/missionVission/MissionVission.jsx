@@ -24,7 +24,7 @@ const MissionVision = () => {
           </div>
 
           {/* Vision Card */}
-          <div className="flex bg-white shadow-lg border rounded-xl  flex-col items-start gap-4">
+          <div className="flex bg-white shadow-lg border rounded-xl p-6  flex-col items-start gap-4">
             <div className="bg-teal-100 p-3 rounded-full">
               <FaBullseye className="text-teal-600 text-2xl" />
             </div>
