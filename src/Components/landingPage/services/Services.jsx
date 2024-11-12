@@ -7,20 +7,20 @@ const Services = () => {
       title: "Installation/Management of School Healing Bay",
       content:
         "This service provides the setup and ongoing management of a dedicated 'Healing Bay' within schools, a safe and supportive space where students can receive first aid, health checks, and emotional support. Our team ensures the Healing Bay is equipped with necessary medical supplies, staffed with trained personnel, and maintained to promote students' health and well-being in a caring environment",
-      image: "/src/assets/installation.jpg",
+      image: "/assets/installation.jpg",
     },
     {
       title: "Health Education & Promotion",
       content:
         "We focus on educating students and staff about essential health topics, including nutrition, hygiene, mental health, and physical wellness. Through workshops, interactive sessions, and resource materials, we promote healthy habits and empower the school community to make informed decisions, fostering a culture of wellness and proactive health management.",
-      image: "/src/assets/eduPromotion.jpg",
+      image: "/assets/eduPromotion.jpg",
     },
     // Add more slides as needed
     {
       title: "Nutrition/Medical Screening",
       content:
         "We provide comprehensive health screenings, including assessments of nutritional status and basic medical checks for students. Our team evaluates key health indicators to identify any potential concerns early on, supporting students' physical well-being and ensuring they receive appropriate guidance or referrals for further care if needed. This proactive approach helps maintain a healthy school environment and promotes optimal growth and development.",
-      image: "/src/assets/healthservice.png",
+      image: "/assets/healthservice.png",
     },
     {
       title: "Psychological Counseling",
@@ -32,13 +32,13 @@ const Services = () => {
       title: "Standby Health Officer",
       content:
         "We also provides a dedicated health professional on-site at schools to ensure immediate response to medical emergencies and ongoing health support for students and staff. The Standby Health Officer is trained in first aid, emergency care, and general health management, offering peace of mind and quick assistance in case of health-related incidents throughout the school day.",
-      image: "/src/assets/healthedu.jpg",
+      image: "/assets/healthedu.jpg",
     },
     {
       title: "Seminars and Health Fair",
       content:
         "We organizes engaging seminars and health fairs to promote health awareness and education within the school community. Through interactive sessions and informative displays, students, staff, and parents gain valuable insights into various health topics, including nutrition, mental well-being, and preventive care. The events aim to foster a culture of health, encourage healthy habits, and provide access to resources and expert advice in a fun and engaging environment.",
-      image: "/src/assets/health.jpg",
+      image: "/assets/health.jpg",
     },
   ];
 
