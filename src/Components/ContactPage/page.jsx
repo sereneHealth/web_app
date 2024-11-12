@@ -119,7 +119,7 @@ const ContactPage = () => {
               type="text"
               placeholder="Full Name"
               {...register("fullname", { required: true })}
-              className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary w-full"
+              className="p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary w-full"
             />
             {errors.fullname && (
               <span className="text-red-500 text-sm">Full Name is required</span>
@@ -130,7 +130,7 @@ const ContactPage = () => {
               type="email"
               placeholder="Email Address"
               {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
-              className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary w-full"
+              className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary"
             />
             {errors.email && (
               <span className="text-red-500 text-sm">Valid email is required</span>
@@ -141,7 +141,7 @@ const ContactPage = () => {
             type="text"
             placeholder="Subject"
             {...register("subject", { required: true })}
-            className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary w-full"
+            className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary"
           />
             {errors.subject && (
               <span className="text-red-500 text-sm">Subject is required</span>
@@ -161,7 +161,7 @@ const ContactPage = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full p-4 bg-primary text-white tracking-snug rounded-xl font-bold hover:focus:ring-primary transition hover:bg-white hover:border hover:border-primary hover:text-primary transition ease-in-out duration-70"
+              className="w-full p-4 bg-primary text-white tracking-snug rounded-xl font-bold hover:focus:ring-primary transition hover:bg-white hover:border hover:border-primary hover:text-primary ease-in-out duration-70"
             >
               Send Message
             </button>

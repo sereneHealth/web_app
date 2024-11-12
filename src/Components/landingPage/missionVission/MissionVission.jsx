@@ -24,7 +24,7 @@ const MissionVision = () => {
           </div>
 
           {/* Vision Card */}
-          <div className="flex bg-white shadow-lg border rounded-xl p-6 flex-col items-start gap-4">
+          <div className="flex bg-white shadow-lg border rounded-xl  flex-col items-start gap-4">
             <div className="bg-teal-100 p-3 rounded-full">
               <FaBullseye className="text-teal-600 text-2xl" />
             </div>
@@ -40,7 +40,7 @@ const MissionVision = () => {
        <div className="relative">
        <div className="absolute inset-0 bg-[#0D183A] opacity-40"></div>
        <div className="hidden md:block">
-        <img src={missionvission} alt="wome image" />
+        <img src={missionvission} alt="students image" />
         </div>
        </div>
       </div>

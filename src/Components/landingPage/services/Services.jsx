@@ -32,7 +32,6 @@ const Services = () => {
       title: "Standby Health Officer",
       content:
         "We also provides a dedicated health professional on-site at schools to ensure immediate response to medical emergencies and ongoing health support for students and staff. The Standby Health Officer is trained in first aid, emergency care, and general health management, offering peace of mind and quick assistance in case of health-related incidents throughout the school day.",
-      // image: "/src/assets/healthservice.jpg",
       image: "/src/assets/healthedu.jpg",
     },
     {
@@ -56,7 +55,7 @@ const Services = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 8000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);

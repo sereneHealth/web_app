@@ -87,7 +87,7 @@ const NavItems = ({ activeTab, onTabClick }) => (
   <>
     <li>
       <a
-        href="#"
+        href="/"
         className={`flex items-center ${
           activeTab === "home" ? "text-teal-500" : "text-gray-800"
         } hover:text-teal-500`}
