@@ -91,12 +91,12 @@ const Programes = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
+        <div className="flex flex-wrap justify-center py-8">
+          <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-2 gap-8">
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className="relative h-[300px] lg:w-[600px] w-[360px] overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 group"
+                className="h-[300px] w-[19rem] md:w-[350px] lg:w-[600px] overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 group"
                 style={{
                   backgroundImage: `url(${plan.image})`,
                   backgroundSize: "cover",
