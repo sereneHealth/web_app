@@ -4,6 +4,8 @@ import Footer from '../../common/Footer'
 import { HeroPage } from './heropage/HeroPage'
 import MissionVission from './missionVission/MissionVission'
 import Services from './services/Services'
+import Programes from './programes/Programes'
+import ObjectivesSection from './objectivesection/ObjectiveSection'
 
 export const LandingPage = () => {
   return (
@@ -11,7 +13,9 @@ export const LandingPage = () => {
     <Navbar/>
     <HeroPage/>
     <MissionVission/>
+    <ObjectivesSection/>
     <Services/>
+    <Programes/>
     <Footer/>
     </>
   )
