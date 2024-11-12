@@ -12,7 +12,7 @@ const plans = [
       "health talk/Health education and promotion",
       "distribution of I.E.C materials",
     ],
-    image: "/src/assets/eduPromotion.jpg",
+    image: "/assets/eduPromotion.jpg",
   },
   {
     title: "Classic",
@@ -23,7 +23,7 @@ const plans = [
       "Treatment of minor ailments and referral of need.",
       "Provision of Primary Medical Provider on request",
     ],
-    image: "/src/assets/eduPromotion.jpg",
+    image: "/assets/eduPromotion.jpg",
   },
   {
     title: "Standard",
@@ -34,7 +34,7 @@ const plans = [
       "One(1) standby Primary Medical Provider 9am-1pm",
       "Inspection of food vendor and stalls",
     ],
-    image: "/src/assets/eduPromotion.jpg",
+    image: "/assets/eduPromotion.jpg",
   },
   {
     title: "Premium",
@@ -46,7 +46,7 @@ const plans = [
       "Medical and Psychological counselling",
       "Two (2) standby Primary Medical Provider 9am- 1pm",
     ],
-    image: "/src/assets/eduPromotion.jpg",
+    image: "/assets/eduPromotion.jpg",
   },
 ];
 
