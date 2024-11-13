@@ -45,7 +45,7 @@ const ContactPage = () => {
     <div className="">
     <div className="relative w-full h-[75vh]">
       <img 
-        src="/images/contact-bg.jpg" 
+        src="/images/contact-image.jpg" 
         alt="Contact Us Background" 
         className="w-full h-full object-cover" 
       />
@@ -166,9 +166,21 @@ const ContactPage = () => {
               Send Message
             </button>
         </form>
+        
         <ToastContainer />
       </div>
     </div>
+    <div className="bg-[#edf9f7] flex justify-center items-center max-w-full py-6 md:py-16 px-6 md:px-40 ">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5635779321665!2d3.4032497737292773!3d6.450032324015375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b3b367f1d15%3A0x4daeb8b8659d8355!2sLafiaji%20Secretariat!5e0!3m2!1sen!2sng!4v1731518805560!5m2!1sen!2sng"
+        width="1195"
+        height="400"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+        </div>
     </div>
     <Footer />
     </>
