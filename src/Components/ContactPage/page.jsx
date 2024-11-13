@@ -12,6 +12,7 @@ import { FaYoutube } from "react-icons/fa6";
 import { useForm } from "react-hook-form"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios"
 
 const socialIcons = [<RiInstagramFill />, <FaFacebook />, <FaXTwitter />, <FaYoutube />]
 
@@ -21,24 +22,50 @@ const ContactPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  const onSubmit = (data) => {
-    toast.success(
-      <>
-        <strong>Message sent!</strong>
-        <br />
-        Your message has been sent successfully!
-      </>,
-      {
-        position: "bottom-center",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,     
-      }
-    );
-    console.log(data)
-  }
+  const onSubmit = async (data) => {
+    try {
+      const { fullname, ...filteredData } = data;
+  
+      const response = await axios.post('https://web-api-775r.onrender.com/send', filteredData);
+  
+      toast.success(
+        <>
+          <strong>Message Sent!</strong>
+          <br />
+          Your message has been sent successfully!
+        </>,
+        {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        }
+      );
+  
+      console.log(response.data); 
+    } catch (error) {
+      toast.error(
+        <>
+          <strong>Error Sending Message</strong>
+          <br />
+          Please try again later.
+        </>,
+        {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        }
+      );
+  
+      console.error(error);
+    }
+  };
+ 
   return (
     <>
     <Navbar />
