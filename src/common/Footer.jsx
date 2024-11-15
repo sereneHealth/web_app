@@ -1,6 +1,6 @@
 // Footer.jsx
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { brandlogo } from '../assets';
 
 const Footer = () => {
@@ -35,10 +35,10 @@ const Footer = () => {
             </button>
           </div>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF size={24} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTwitter size={24} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaInstagram size={24} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaYoutube size={24} /></a>
+            <a href="https://www.facebook.com/Sereneschealinitiative?mibextid=ZbWKwL" className="text-gray-400 hover:text-white"><FaFacebookF size={24} /></a>
+            <a href="https://twitter.com/Schoolhealthpro?t=gcW7VUk0nOFgZHknWulZwQ&s=09" className="text-gray-400 hover:text-white"><FaTwitter size={24} /></a>
+            <a href="https://instagram.com/serene_scheal_initiative?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%" className="text-gray-400 hover:text-white"><FaInstagram size={24} /></a>
+            <a href="https://www.linkedin.com/company/serene-scheal-initiative/" className="text-gray-400 hover:text-white"><FaLinkedin size={24} /></a>
           </div>
         </div>
         
