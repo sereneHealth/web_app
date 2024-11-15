@@ -6,6 +6,7 @@ import MissionVission from './missionVission/MissionVission'
 import Services from './services/Services'
 import Programes from './programes/Programes'
 import ObjectivesSection from './objectivesection/ObjectiveSection'
+import WhyUs from './whyUs/WhyUs'
 
 export const LandingPage = () => {
   return (
@@ -16,6 +17,7 @@ export const LandingPage = () => {
     <ObjectivesSection/>
     <Services/>
     <Programes/>
+    <WhyUs/>
     <Footer/>
     </>
   )

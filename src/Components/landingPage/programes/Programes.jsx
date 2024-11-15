@@ -5,65 +5,72 @@ import Modal from "../../../common/Modals";
 const plans = [
   {
     title: "Basic",
-    cost: "#70000",
+    initialCost:"140,000",
+    cost: "100,000",
     features: [
-      "setting/inspection of school sickbay and first aid box",
-      "training of school health prefects",
-      "health talk/Health education and promotion",
-      "distribution of I.E.C materials",
+      "Setting/Inspection of School Healingbay and First Aid Box.",
+      "Health talk/Health Education and Promotion.",
+      "Training of School Staff and Health prefects.",
+      "Distribution of I.E.C materials.",
     ],
     image: "/assets/eduPromotion.jpg",
   },
   {
     title: "Classic",
-    cost: "#120000",
+    initialCost:"250,000",
+    cost: "180,000",
     features: [
       "All basic plan",
-      "provision of essential drugs.",
-      "Treatment of minor ailments and referral of need.",
-      "Provision of Primary Medical Provider on request",
+      "Access to Emergency Preparedness Session.",
+      "Access to Primary Medical Provider on request.",
+      "Dental and Visual Screening/Session.",
+      
     ],
     image: "/assets/eduPromotion.jpg",
   },
   {
     title: "Standard",
-    cost: "#180000",
+    initialCost:"560,000",
+    cost: "400,000",
     features: [
       "All Classic Plans",
       "Inspection of school environment and facilities using endorsed checklist",
-      "One(1) standby Primary Medical Provider 9am-1pm",
+      "One(1) standby Primary Medical Provider 9am-2pm",
       "Inspection of food vendor and stalls",
+      "Access to Annual School Health Fairs",
+      "Access to Termly Psychological Counseling Sessions"
     ],
     image: "/assets/eduPromotion.jpg",
   },
-  {
-    title: "Premium",
-    cost: "#250000",
-    comment: "Recommended",
-    features: [
-      "All Premium Plans",
-      "Medical and Nutritional Screening",
-      "Medical and Psychological counselling",
-      "Two (2) standby Primary Medical Provider 9am- 1pm",
-    ],
-    image: "/assets/eduPromotion.jpg",
-  },
+  // {
+  //   title: "Premium",
+  //   initialCost:"560,000",
+  //   cost: "250000",
+  //   comment: "Recommended",
+  //   features: [
+  //     "All Premium Plans",
+  //     "Medical and Nutritional Screening",
+  //     "Medical and Psychological counselling",
+  //     "Two (2) standby Primary Medical Provider 9am- 1pm",
+  //   ],
+  //   image: "/assets/eduPromotion.jpg",
+  // },
 ];
 
 const Programes = () => {
   const [isSubscribeModalOpen, setSubscribeModalOpen] = useState(false);
   const [isSuccessModalOpen, setSuccessModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null); // State for the selected plan
+  const [selectedPlan, setSelectedPlan] = useState(null);
 
   const handleSubscribeClick = (plan) => {
-    setSelectedPlan(plan); // Store the selected plan details
+    setSelectedPlan(plan);
     setSubscribeModalOpen(true);
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setSubscribeModalOpen(false); // Close subscribe modal
-    setSuccessModalOpen(true); // Open success modal
+    setSubscribeModalOpen(false);
+    setSuccessModalOpen(true);
   };
 
   return (
@@ -96,16 +103,21 @@ const Programes = () => {
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className="h-[300px] w-[19rem] md:w-[350px] lg:w-[600px] overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 group"
+                className="h-[350px] w-[19rem] md:w-[350px] lg:w-[600px] overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 group"
                 style={{
                   backgroundImage: `url(${plan.image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
               >
-                <div className="bg-teal-500 w-full flex justify-between text-[24px] px-5 py-2 text-white">
+                <div className="bg-teal-500 w-full flex justify-between text-[24px] px-5 text-white">
                   <p>{plan.title}</p>
-                  <p>{plan.cost}</p>
+                  <div>
+                  <p>&#8358;{plan.cost}</p>
+                  <div className="flex text-end justify-end">
+                  <p className="text-[12px] text-[red] line-through">&#8358;{plan.initialCost}</p>
+                  </div>
+                  </div>
                 </div>
                 <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
                   <ul className="mb-6 space-y-2 text-center">
@@ -113,8 +125,7 @@ const Programes = () => {
                       <li key={i}>{feature}</li>
                     ))}
                   </ul>
-                  <button
-                    onClick={() => handleSubscribeClick(plan)} // Pass the plan to handleSubscribeClick
+                  <button                    onClick={() => handleSubscribeClick(plan)} // Pass the plan to handleSubscribeClick
                     className="px-4 py-2 bg-teal-500 hover:bg-teal-600 rounded-full text-white font-semibold transition-colors duration-200"
                   >
                     Subscribe

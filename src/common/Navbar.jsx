@@ -19,7 +19,8 @@ const Navbar = () => {
     <nav className="flex items-center justify-between py-4 px-6 bg-white shadow-md sticky top-0 z-10">
       {/* Logo */}
       <div className="flex items-center">
-        <img src={brandlogo} alt="" width={100} height={100}/>
+        <img src={brandlogo} alt="" width={60} height={60}/>
+        <span className="">Serenescheal</span>
       </div>
 
       {/* Desktop Nav Items */}
@@ -181,7 +182,7 @@ const NavItems = ({ activeTab, onTabClick }) => (
         </a>
       </div>
     </li>
-    <li className="relative group">
+    {/* <li className="relative group">
       <a
         href="#"
         className={`flex items-center ${
@@ -201,7 +202,7 @@ const NavItems = ({ activeTab, onTabClick }) => (
           innovation 2
         </a>
       </div>
-    </li>
+    </li> */}
   </>
 );
 
