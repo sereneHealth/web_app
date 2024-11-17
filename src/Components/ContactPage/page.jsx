@@ -87,8 +87,8 @@ const ContactPage = () => {
         </h1>
       </div>
     </div>
-    <div className='bg-[#edf9f7] py-6 md:py-20 px-6 md:px-24'>
-      <div className='flex flex-col md:flex-row justify-between mx-auto gap-6 md:gap-36 items-center'>
+    <div className='bg-[#edf9f7] py-6 md:py-20 px-6 md:px-20'>
+      <div className='flex flex-col md:flex-row justify-between mx-auto gap-6 md:gap-28 items-center'>
         <div className='flex flex-col gap-4 md:gap-8'>
           <h1 className='text-2xl md:text-4xl font-bold tracking-wide w-full md:w-[480px] mb-2 md:mb-6 text-deep-black'>Got any questions, queries and/or comments???</h1>
           <div className='flex flex-col gap-1'>
@@ -137,7 +137,7 @@ const ContactPage = () => {
           </div>
           
         </div>
-          <form
+        <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col space-y-6 p-5 md:p-8 bg-white shadow-custom w-full rounded-3xl"
           >
@@ -155,7 +155,7 @@ const ContactPage = () => {
             {/* Email Address Input */}
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder="Your Email Address"
               {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
               className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary"
             />
@@ -192,8 +192,7 @@ const ContactPage = () => {
             >
               Send Message
             </button>
-        </form>
-        
+        </form>        
         <ToastContainer />
       </div>
     </div>

@@ -109,8 +109,8 @@ const NavItems = ({ activeTab, onTabClick }) => (
         <FaChevronDown className="ml-1 transform transition-transform group-hover:rotate-180" />
       </a>
       <div className="absolute top-full left-0 mt-2 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-          Our Team
+        <a href="/about-us" className="block px-4 py-2 hover:bg-gray-100">
+          About Us
         </a>
         <hr />
         <a href="#" className="block px-4 py-2 hover:bg-gray-100">
