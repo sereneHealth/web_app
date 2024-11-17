@@ -17,8 +17,8 @@ export const HeroPage = () => {
           <p className="text-[16px] text-center">
             Empowering Healthy Futures, One School at a Time!
           </p>
-          <button className="flex items-center justify-center bg-teal-500 px-4 py-2 rounded-md">
-            <span>Contact Us</span> <IoMdArrowForward className="ml-2" />
+          <button className="flex items-center justify-center bg-teal-500 px-4 py-2 rounded-md cursor-pointer">
+            <a href="/contact" className="decoration-none">Contact Us</a> <IoMdArrowForward className="ml-2" />
           </button>
         </div>
       </div>
