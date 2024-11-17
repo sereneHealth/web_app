@@ -87,8 +87,8 @@ const ContactPage = () => {
         </h1>
       </div>
     </div>
-    <div className='bg-[#edf9f7] py-6 md:py-20 px-6 md:px-40'>
-      <div className='flex flex-col md:flex-row justify-between mx-auto gap-6 md:gap-28'>
+    <div className='bg-[#edf9f7] py-6 md:py-20 px-6 md:px-24'>
+      <div className='flex flex-col md:flex-row justify-between mx-auto gap-6 md:gap-36 items-center'>
         <div className='flex flex-col gap-4 md:gap-8'>
           <h1 className='text-2xl md:text-4xl font-bold tracking-wide w-full md:w-[480px] mb-2 md:mb-6 text-deep-black'>Got any questions, queries and/or comments???</h1>
           <div className='flex flex-col gap-1'>
