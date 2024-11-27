@@ -20,7 +20,7 @@ const AboutPage = () => {
           <div 
             className="absolute inset-0 flex items-center justify-center text-center text-white font-poppins"
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-wide uppercase">
+            <h1 className="text-3xl md:text-6xl font-bold tracking-wide uppercase">
               About Us
             </h1>
           </div>

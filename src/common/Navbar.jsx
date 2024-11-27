@@ -141,22 +141,22 @@ const NavItems = ({ activeTab, onTabClick }) => (
     </li>
     <li className="relative group">
       <a
-        href="#"
+        href="/events"
         className={`flex items-center ${
           activeTab === "programs" ? "text-teal-500" : "text-gray-800"
         } hover:text-teal-500`}
-        onClick={() => onTabClick("programs")}
+        onClick={() => onTabClick("events")}
       >
-        Programs and Products
+        Events
         <FaChevronDown className="ml-1 transform transition-transform group-hover:rotate-180" />
       </a>
       <div className="absolute top-full left-0 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
-        <a href="#" className="block px-4 py-2 hover:text-teal-500">
-          Program 1
+        <a href="/events" className="block px-4 py-2 hover:text-teal-500">
+          Events
         </a>
         <hr />
         <a href="#" className="block px-4 py-2 hover:text-teal-500">
-          Program 2
+          Event Details
         </a>
       </div>
     </li>

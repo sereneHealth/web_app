@@ -70,26 +70,27 @@ const ContactPage = () => {
     <>
     <Navbar />
     <div className="">
-    <div className="relative w-full h-[75vh]">
-      <img 
-        src="/images/contact-image.jpg" 
-        alt="Contact Us Background" 
-        className="w-full h-full object-cover" 
-      />
-      <div 
-        className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent"
-      />
-      <div 
-        className="absolute inset-0 flex items-center justify-center text-center text-white"
-      >
-        <h1 className="text-4xl md:text-6xl font-bold tracking-wide uppercase">
-          Contact Us
-        </h1>
-      </div>
-    </div>
-    <div className='bg-[#edf9f7] py-6 md:py-20 px-6 md:px-20'>
-      <div className='flex flex-col md:flex-row justify-between mx-auto gap-6 md:gap-28 items-center'>
-        <div className='flex flex-col gap-4 md:gap-8'>
+    <div className="relative w-full h-[40vh] md:h-[60vh]">
+          <img 
+            src="/images/contact-image.jpg" 
+            alt="Contact Us Background" 
+            className="w-full h-full object-fill" 
+          />
+          <div 
+            className="absolute top-0 left-0 w-full h-full bg-[#111111cc]"
+          />
+          <div 
+            className="absolute inset-0 flex items-center justify-center text-center text-white font-poppins"
+          >
+            <h1 className="text-3xl md:text-6xl font-bold tracking-wide uppercase">
+              Contact Us
+            </h1>
+          </div>
+        </div> 
+
+    <div className='bg-[#edf9f7] py-8 md:py-20 px-6 md:px-20'>
+      <div className='flex flex-col md:flex-row justify-between mx-auto gap-10 md:gap-28 items-center'>
+        <div className='flex flex-col gap-5 md:gap-8 md:w-1/2 w-full' data-aos="fade-right">
           <h1 className='text-2xl md:text-4xl font-bold tracking-wide w-full md:w-[480px] mb-2 md:mb-6 text-deep-black'>Got any questions, queries and/or comments???</h1>
           <div className='flex flex-col gap-1'>
             <div className="flex items-center gap-3">
@@ -139,7 +140,8 @@ const ContactPage = () => {
         </div>
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-6 p-5 md:p-8 bg-white shadow-custom w-full rounded-3xl"
+            className="flex flex-col space-y-6 p-5 md:p-8 bg-white shadow-custom w-full md:w-1/2 rounded-3xl"
+            data-aos="flip-right"
           >
           {/* Fullname Input */}
             <input
@@ -196,7 +198,7 @@ const ContactPage = () => {
         <ToastContainer />
       </div>
     </div>
-    <div className="bg-[#edf9f7] flex justify-center items-center max-w-full py-6 md:py-16 px-6 md:px-40 ">
+    <div className="bg-[#edf9f7] flex justify-center items-center max-w-full py-4 md:py-16 px-8 md:px-40 mb-12 md:mb-0" data-aos="fade-in">
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5635779321665!2d3.4032497737292773!3d6.450032324015375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b3b367f1d15%3A0x4daeb8b8659d8355!2sLafiaji%20Secretariat!5e0!3m2!1sen!2sng!4v1731518805560!5m2!1sen!2sng"
         width="1195"
