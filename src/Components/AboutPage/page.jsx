@@ -26,7 +26,7 @@ const AboutPage = () => {
           </div>
         </div> 
 
-        <div className="px-4 md:px-6 lg:px-24 max-w-[1440px] py-[51px] md:py-[102px] mx-auto space-y-16 md:space-y-32">
+        <div className="px-4 md:px-6 lg:px-24 max-w-[1440px] py-[32px] md:py-[102px] mx-auto space-y-16 md:space-y-32">
           {aboutPageData.map((data, idx) => {
             const { title, desc, image } = data;
             return (
