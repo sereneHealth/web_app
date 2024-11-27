@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../common/Navbar'
 import Footer from '../../common/Footer' 
+import Hero from '../../common/Hero' 
 import { aboutPageData } from '../../constants/constants'
 
 const AboutPage = () => {
@@ -8,24 +9,8 @@ const AboutPage = () => {
     <>
       <Navbar />
       <div className='flex flex-col space-y-8 md:space-y-16'>
-        <div className="relative w-full h-[40vh] md:h-[60vh]">
-          <img 
-            src="/images/serene2.jpg" 
-            alt="Contact Us Background" 
-            className="w-full h-full object-fill" 
-          />
-          <div 
-            className="absolute top-0 left-0 w-full h-full bg-[#111111cc]"
-          />
-          <div 
-            className="absolute inset-0 flex items-center justify-center text-center text-white font-poppins"
-          >
-            <h1 className="text-3xl md:text-6xl font-bold tracking-wide uppercase">
-              About Us
-            </h1>
-          </div>
-        </div> 
-
+      <Hero title="Contact us" image="/images/serene2.jpg" />
+       
         <div className="px-4 md:px-6 lg:px-24 max-w-[1440px] py-[32px] md:py-[52px] mx-auto space-y-16 md:space-y-32">
           {aboutPageData.map((data, idx) => {
             const { title, desc, image } = data;

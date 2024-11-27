@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../common/Navbar'
 import Footer from '../../common/Footer'
+import Hero from '../../common/Hero'
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsFillSendFill } from "react-icons/bs";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -70,23 +71,7 @@ const ContactPage = () => {
     <>
     <Navbar />
     <div className="">
-    <div className="relative w-full h-[40vh] md:h-[60vh]">
-          <img 
-            src="/images/contact-image.jpg" 
-            alt="Contact Us Background" 
-            className="w-full h-full object-fill" 
-          />
-          <div 
-            className="absolute top-0 left-0 w-full h-full bg-[#111111cc]"
-          />
-          <div 
-            className="absolute inset-0 flex items-center justify-center text-center text-white font-poppins"
-          >
-            <h1 className="text-3xl md:text-6xl font-bold tracking-wide uppercase">
-              Contact Us
-            </h1>
-          </div>
-        </div> 
+      <Hero title="Contact us" image="/images/contact-image.jpg" />
 
     <div className='bg-[#edf9f7] py-8 md:py-20 px-6 md:px-20'>
       <div className='flex flex-col md:flex-row justify-between mx-auto gap-10 md:gap-28 items-center'>
