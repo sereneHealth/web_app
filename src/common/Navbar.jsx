@@ -108,12 +108,12 @@ const NavItems = ({ activeTab, onTabClick }) => (
         About
         <FaChevronDown className="ml-1 transform transition-transform group-hover:rotate-180" />
       </a>
-      <div className="absolute top-full left-0 mt-2 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
-        <a href="/about-us" className="block px-4 py-2 hover:bg-gray-100">
+      <div className="absolute top-full left-0 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
+        <a href="/about-us" className="block px-4 py-2 hover:text-teal-500">
           About Us
         </a>
         <hr />
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+        <a href="#" className="block px-4 py-2 hover:text-teal-500">
           Our Mission
         </a>
       </div>
@@ -129,12 +129,12 @@ const NavItems = ({ activeTab, onTabClick }) => (
         Digital Innovations
         <FaChevronDown className="ml-1 transform transition-transform group-hover:rotate-180" />
       </a>
-      <div className="absolute top-full left-0 mt-2 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+      <div className="absolute top-full left-0 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
+        <a href="#" className="block px-4 py-2 hover:text-teal-500">
           Innovation 1
         </a>
         <hr />
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+        <a href="#" className="block px-4 py-2 hover:text-teal-500">
           Innovation 2
         </a>
       </div>
@@ -150,12 +150,12 @@ const NavItems = ({ activeTab, onTabClick }) => (
         Programs and Products
         <FaChevronDown className="ml-1 transform transition-transform group-hover:rotate-180" />
       </a>
-      <div className="absolute top-full left-0 mt-2 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+      <div className="absolute top-full left-0 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
+        <a href="#" className="block px-4 py-2 hover:text-teal-500">
           Program 1
         </a>
         <hr />
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+        <a href="#" className="block px-4 py-2 hover:text-teal-500">
           Program 2
         </a>
       </div>
@@ -172,37 +172,16 @@ const NavItems = ({ activeTab, onTabClick }) => (
         <FaChevronDown className="ml-1 transform transition-transform group-hover:rotate-180" />
       </a>
 
-      <div className="absolute top-full left-0 mt-2 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-          Research 1
+      <div className="absolute top-full left-0 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
+        <a href="/blog" className="block px-4 py-2 hover:text-teal-500">
+          Publications
         </a>
         <hr />
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+        <a href="#" className="block px-4 py-2 hover:text-teal-500">
           Research 2
         </a>
       </div>
     </li>
-    {/* <li className="relative group">
-      <a
-        href="#"
-        className={`flex items-center ${
-          activeTab === "opensource" ? "text-teal-500" : "text-gray-800"
-        } hover:text-teal-500`}
-        onClick={() => onTabClick("opensource")}
-      >
-        Open Source Innovations
-        <FaChevronDown className="ml-1 transform transition-transform group-hover:rotate-180" />
-      </a>
-      <div className="absolute top-full left-0 mt-2 hidden w-48 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block">
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-          innivation 1
-        </a>
-        <hr />
-        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-          innovation 2
-        </a>
-      </div>
-    </li> */}
   </>
 );
 
