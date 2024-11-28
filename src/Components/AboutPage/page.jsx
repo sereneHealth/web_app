@@ -9,7 +9,7 @@ const AboutPage = () => {
     <>
       <Navbar />
       <div className='flex flex-col space-y-8 md:space-y-16'>
-      <Hero title="Contact us" image="/images/serene2.jpg" />
+      <Hero title="About us" image="/images/serene2.jpg" />
        
         <div className="px-4 md:px-6 lg:px-24 max-w-[1440px] py-[32px] md:py-[52px] mx-auto space-y-16 md:space-y-32">
           {aboutPageData.map((data, idx) => {
