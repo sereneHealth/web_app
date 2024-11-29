@@ -1,3 +1,5 @@
+import { FaSquareInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+
 export const aboutPageData = [
     {
         title: "WHO WE ARE",
@@ -21,20 +23,40 @@ export const aboutPageData = [
     }
 ]
 
-export const staffs = [
+export const socials = [
     {
-        name: "",
-        title: "",
-        image: "",
+        icon: FaSquareInstagram,
+        link: "https://www.instagram.com/adeshokanb?igsh=MWs0c242cWVoaDF2aw==",
     },
     {
-        name: "",
-        title: "",
-        image: "",
+        icon: FaLinkedin,
+        link: "https://www.linkedin.com/in/bilikis-adeshokan-b15047189?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-        name: "",
-        title: "",
-        image: "",
+        icon: FaXTwitter,
+        link: "https://x.com/BAdeshokan?t=6L9ctIH2ykBG4IUM4E-Rgw&s=09",
+    },    
+];
+
+export const achievements = [
+    {
+        id: 1,
+        heading: "Successfully piloted its school health program, reaching multiple school communities and empowering educators and learners with health education and first aid resources.  ",
+    },
+    {
+        id: 2,
+        heading: "Donated first aid kits to schools during its outreach phase, directly impacting the safety of thousands of students."
+    },
+    {
+        id: 3,
+        heading: "Partnered with school administrators and stakeholders to implement tailored health programs that promote child safety and well-being."
+    },
+    {
+        id: 4,
+        heading: "Shortlisted for prestigious grants and fellowships such as the African Impact Initiative Challenge, Astra Fellowship, Alx Founders Academy, recognizing the initiative's innovative approach and potential for scalable impact."
+    },
+    {
+        id: 5,
+        heading: "Recently launched a technical team to develop an online platform aimed at increasing the accessibility and efficiency of school health solutions."
     },
 ]

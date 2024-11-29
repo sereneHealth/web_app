@@ -4,7 +4,7 @@ import Footer from '../../common/Footer'
 import Hero from '../../common/Hero' 
 import { GiSmartphone } from "react-icons/gi";
 import { AiOutlineMail } from "react-icons/ai";
-import { aboutPageData } from '../../constants/constants'
+import { aboutPageData, socials , achievements} from '../../constants/constants'
 
 const AboutPage = () => {
   return (
@@ -58,37 +58,40 @@ export default AboutPage
 
 const CEOSection = () => {
   return (
-    <section className="px-4 md:px-6 lg:px-24 w-full md:max-w-[1440px] py-12 mx-auto space-y-8">
+    <section className="px-4 md:px-6 lg:px-24 w-full md:max-w-[1440px] py-4 md:py-12 mx-auto space-y-8">
       <div className="flex flex-col items-center justify-center text-center">
         <h1 
+          data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
           className="relative text-xl md:text-4xl font-bold text-gray-800 
                     after:content-[''] after:absolute after:w-[100px] after:h-[6px] 
                     after:bg-teal-500 after:bottom-[-10px] md:after:bottom-[-20px] 
                     after:left-1/2 after:-translate-x-1/2 text-center 
                     mb-6 md:mb-10 font-poppins"
         >
-          MEET THE CEO
+          MEET OUR CEO
         </h1>
        
-        <p className="text-[#505050] text-[16px]/[24px] md:text-[20px]/[30px] md:mt-[24px] mt-[16px] md:pb-[48px] pb-[32px] text-center w-full md:w-[932px]">
-          Get to know the visionary behind SERENE SCHEAL INTIATIVE. Our CEO is dedicated 
-          to driving innovation, empowering communities, and fostering growth 
-          with a mission to make a difference globally.
+        <p 
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          className="text-[#505050] text-[16px]/[24px] md:text-[20px]/[30px] md:mt-[24px] mt-[16px] md:pb-[48px] pb-[32px] text-center w-full md:w-[932px]">
+            Get to know the visionary behind SERENE SCHEAL INTIATIVE. Our CEO is deeply committed to creating sustainable solutions that ensure every child has access to healthcare services and thrives in a safe learning environment.  
         </p>
       </div>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-        <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+        <div data-aos="zoom-in-right" className="w-full md:w-1/3 flex justify-center md:justify-start">
           <img 
-            src="/assets/award.jpg" 
+            src="/images/founder.jpg" 
             alt="CEO" 
             className="w-full h-60 md:w-[400px] md:h-[370px] object-cover shadow-lg"
           />
         </div>
 
-        <div className="w-full md:w-2/3 text-center md:text-left space-y-4 justify-start">
+        <div data-aos="zoom-in-left" className="w-full md:w-2/3 text-center md:text-left space-y-4 justify-start">
           <h3 className="text-2xl md:text-3xl font-bold text-[#212121] font-poppins">
-            Jane Doe
+            Bilikis Adeshokan Oluwatoyin
           </h3>
           <p className="text-sm md:text-base text-[#505050] font-semibold">
             CEO & Founder of SERENE SCHEAL INTIATIVE
@@ -104,11 +107,51 @@ const CEOSection = () => {
             </div>
           </div>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-            "At SSI, we believe in creating opportunities for everyone, everywhere. Our mission is to use innovative solutions to empower individuals and communities globally."
+            "a pioneering social enterprise committed to enhancing the health and safety of school children across Nigeria. With over a decade of experience as a teacher and school administrator, coupled with her expertise as a licensed community health practitioner."
           </p>
-          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-            With over 15 years of experience in technology and a passion for education, Jane is committed to bridging gaps and fostering growth.
+          <p className="text-sm md:text-base text-gray-700 leading-relaxed font-inter">
+            With over 5 years of experience in healthcare and a passion for education, Bilikis combines education and healthcare knowledge to address critical gaps in school health systems.
           </p>
+          <div className='flex items-center justify-center md:justify-start gap-3 md:gap-6 pt-2 md:pt-4'>
+            {socials.map((data, idx) => {
+              const Icon = data.icon;
+              return (
+                <div key={idx} className='h-10 w-10 flex items-center justify-center rounded-full size-fit border-primary border-2 bg-inherit text-primary hover:border-primary hover:bg-primary hover:text-white transition duration-75 ease-in-out cursor-pointer'>
+                  <a href={data.link} className='text-lg md:text-xl'><Icon /></a>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-8 py-4 md:py-8">
+        <div data-aos="fade-right" className="w-full md:w-2/3 text-center md:text-left space-y-4 justify-start flex flex-col order-2 md:order-1">
+          <h1 className='text-[#212121] md:text-start text-center text-[18px]/[28px] md:text-[30px]/[38px] font-bold'>
+          Under Bilikis Adeshokan's leadership, Serene Scheal Initiative has achieved several significant milestones:        
+          </h1>
+          <ul className='flex flex-col text-secondary text-[16px]/[24px] md:text-[20px]/[30px] gap-2 list-none'>
+            {achievements.map((data) => {
+              const {id, heading} = data
+              return (
+                <li key={id} className='flex items-start justify-start text-start'><span className='list-disc mr-2'> •</span>  <span className='text-start'>{heading}</span>              
+                </li>
+              )
+            })}             
+            
+          </ul>
+        </div>
+
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className="w-full md:w-1/3 flex justify-center md:justify-start order-1 md:order-2">
+            <img 
+              src="/assets/award.jpg" 
+              alt="CEO" 
+              className="w-full h-60 md:w-[400px] md:h-[450px] object-cover shadow-lg"
+            />
         </div>
       </div>
     </section>
