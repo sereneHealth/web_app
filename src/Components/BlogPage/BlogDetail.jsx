@@ -1,81 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 import Navbar from "../../common/Navbar";
 import Footer from "../../common/Footer";
 
-const blogs = [
-  {
-    id: "1",
-    image: "/assets/health.jpg",
-    title: "Is Your Diet Hurting You? Common Nutrition Myths Debunked",
-    date: "November 4, 2024",
-    content: "This is the full content of the blog post about nutrition myths.",
-  },
-  {
-    id: "2",
-    image: "/assets/healthedu.jpg",
-    title: "The Truth About Sugar: What Every Health-Conscious Person Should Know",
-    date: "October 31, 2024",
-    content: "This is the full content of the blog post about sugar.",
-  },
-  {
-    id: "3",
-    image: "/assets/healthservice.png",
-    title: "Why Sleep Is the Secret Ingredient to Your Wellness Routine",
-    date: "October 8, 2024",
-    content: "This is the full content of the blog post Sleep.",
-  },
-  {
-    id: "4",
-    image: "/assets/counseling.jpg",
-    title: "How to Beat Stress: 7 Science-Backed Techniques That Work",
-    date: "October 8, 2024",
-    content: "This is the full content of the blog post about stress management.",
-  },
-  {
-    id: "5",
-    image: "/assets/eduPromotion.jpg",
-    title: "Top 5 Superfoods for Boosting Your Energy Naturally",
-    date: "October 8, 2024",
-    content: "This is the full content of the blog post about Superfoods.",
-  },
-  {
-    id: "6",
-    image: "/assets/healthservice.jpg",
-    title: "The Ultimate Guide to Staying Fit with Just 15 Minutes a Day",
-    date: "October 8, 2024",
-    content: "This is the full content of the blog post about Ultimate Guide to Staying Fit.",
-  },
-  {
-    id: "7",
-    image: "/images/contact-image.jpg",
-    title: "10 Surprising Benefits of Drinking Water You Didn’t Know About",
-    date: "October 8, 2024",
-    content: "This is the full content of the blog post about Surprising Benefits of Drinking Water.",
-  },
-];
-
 const BlogDetail = () => {
   const { id } = useParams();
-  const blog = blogs.find((b) => b.id === id);
+  const [blog, setBlog] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        const response = await axios.get(`https://web-api-775r.onrender.com/post/details/${id}`);
+        setBlog(response.data[0]); // Assuming the API returns an array with one blog.
+      } catch (err) {
+        setError("Failed to fetch blog details. Please try again later.");
+      }
+    };
+
+    fetchBlog();
+  }, [id]);
+
+  const handleImageError = (e) => {
+    e.target.src = "/assets/healthservice.jpg"; 
+  };
+
+  if (error) {
+    return <p>{error}</p>;
+  }
 
   if (!blog) {
-    return <p>Blog not found!</p>;
+    return <p>Loading...</p>;
   }
 
   return (
-   <>
-   <Navbar/>
-    <div className="blog-detail flex flex-col justify-center items-center ">
-      <div className="">
-      <img src={blog.image} alt={blog.title} width={800} height={200} className="rounded-[20px]"/>
+    <>
+      <Navbar />
+      <div className="blog-detail flex flex-col justify-center items-center my-5">
+        <div data-aos="zoom-in">
+          <img
+            src={blog.image}
+            alt={blog.title}
+            width={800}
+            height={200}
+            className="rounded-[20px]"
+            onError={handleImageError}
+          />
+        </div>
+        <section className="flex flex-col justify-center items-center w-[95%] mx-auto">
+          <p className="font-bold text-4xl">{blog.title}</p>
+        <p className="text-teal-500 font-bold">{new Date(blog.created_at).toDateString()}</p>
+        <p data-aos="fade-up" data-aos-duration="1500">{blog.content}</p>
+        </section>
       </div>
-      <h1>{blog.title}</h1>
-      <p>{blog.date}</p>
-      <p>{blog.content}</p>
-    </div>
-    <Footer/>
-   </>
+      <Footer />
+    </>
   );
 };
 
