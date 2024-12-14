@@ -58,7 +58,7 @@ export default AboutPage
 
 const CEOSection = () => {
   return (
-    <section className="px-4 md:px-6 lg:px-24 w-full md:max-w-[1440px] py-4 md:py-12 mx-auto space-y-8">
+    <section className="px-4 md:px-6 lg:px-24 w-full md:max-w-[1440px] py-4 md:py-12 mx-auto space-y-8 overflow-hidden">
       <div className="flex flex-col items-center justify-center text-center">
         <h1 
           data-aos="fade-down"
@@ -103,7 +103,7 @@ const CEOSection = () => {
             </div>
             <div className="flex items-center gap-1 text-[#505050] text-base">
               <AiOutlineMail />
-              <span>sereneschealinitiative@gmail.com</span>
+              <span>ballyunique3568@gmail.com</span>
             </div>
           </div>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed">
