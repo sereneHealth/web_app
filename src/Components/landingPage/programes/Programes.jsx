@@ -76,13 +76,13 @@ const Programes = () => {
   return (
     <>
       <div>
-        <div className="flex flex-col justify-center items-center text-center text-[24px] xl:text-[48px]">
-          <p>Our Programs</p>
-          <div className="bg-teal-300 h-4 w-[14.5%] relative left-12 bottom-5 -z-10 hidden lg:block rounded-sm"></div>
+        <div className="flex flex-col justify-center items-center text-center font-bold text-[24px]/[28px] xl:text-[48px]/[64px] pb-4">
+          <p className="text-center font-bold text-2xl xl:text-4xl">Our Programmes</p>
+          <div className="bg-teal-300 h-3 md:h-4 w-[35%] md:w-[8.5%] relative left-10 md:left-12 bottom-3 md:bottom-4 -z-10 rounded-sm"></div>
         </div>
-        <div className="flex flex-col gap-5 w-[90%] mx-auto">
-          <p>
-            <span className="text-teal-500">O</span>ur program is designed to
+        <div className="flex flex-col gap-5 w-[90%] mx-auto text-base md:text-xl text-gray-700">
+          <p className="">
+            Our program is designed to
             empower students with essential knowledge and skills for a healthier
             life. It covers vital subjects such as health education, nutrition
             education, health seminars, counseling, and medical & nutrition

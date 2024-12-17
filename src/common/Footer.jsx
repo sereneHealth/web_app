@@ -26,7 +26,12 @@ const Footer = () => {
     try {
       const response = await axios.post(
         "https://web-api-775r.onrender.com/newsletter",
-        { email }
+        { email },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       if (response.status === 200 || response.status === 201) {
         toast.success("Thanks for subscribing to our NewsLetter!", {

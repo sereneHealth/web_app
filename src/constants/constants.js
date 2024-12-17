@@ -60,3 +60,4 @@ export const achievements = [
         heading: "Recently launched a technical team to develop an online platform aimed at increasing the accessibility and efficiency of school health solutions."
     },
 ]
+
